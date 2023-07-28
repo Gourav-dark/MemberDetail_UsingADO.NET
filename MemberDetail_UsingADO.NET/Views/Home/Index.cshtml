@@ -1,0 +1,44 @@
+﻿@model List<User>
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="IndexPage">
+    <div class="d-flex justify-content-center">
+        <h5>Member List</h5>
+    </div>
+    <table class="table table-bordered m-2">
+        <thead class="Heading text-center">
+            <tr>
+                <th>Name</th>
+                <th>Phone Number</th>
+                <th>Gender</th>
+                <th>Address</th>
+                <th>Photos</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var obj in Model)
+            {
+                <tr class="userData text-center" style="height:5rem">
+                    <td>@obj.Name</td>
+                    <td>@obj.PhoneNumber</td>
+                    <td>@obj.Gender</td>
+                    <td>@obj.Address</td>
+                    <td class="">
+                        <img src="@obj.ImageUrl" style="height:4.5rem" />
+                    </td>
+                    <td>
+                        <a asp-action="EditMember" asp-route-Id="@obj.Id" class="btn btn-sm btn-info">Edit</a>
+                    </td>
+                    <td>
+                        <a asp-action="DeleteMember" asp-route-Id="@obj.Id" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

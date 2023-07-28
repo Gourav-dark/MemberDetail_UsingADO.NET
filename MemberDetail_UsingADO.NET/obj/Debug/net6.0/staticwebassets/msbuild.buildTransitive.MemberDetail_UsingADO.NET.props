@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\MemberDetail_UsingADO.NET.props" />
+</Project>
