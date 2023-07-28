@@ -1,0 +1,86 @@
+﻿@model List<User>
+
+<div class="IndexPage">
+    <div class="d-flex justify-content-center">
+        <h5>Member List</h5>
+    </div>
+    <table class="table table-bordered">
+        <thead class="Heading text-center">
+            <tr>
+                <th>Name</th>
+                <th>Phone Number</th>
+                <th>Gender</th>
+                <th>Address</th>
+                <th>Photos</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var obj in Model)
+            {
+                <tr class="userData text-center" style="height:5rem;" id="userdata">
+                    <td>@obj.Name</td>
+                    <td>@obj.PhoneNumber</td>
+                    <td>@obj.Gender</td>
+                    <td>@obj.Address</td>
+                    <td class="">
+                        <img src="@obj.ImageUrl" style="height:4.5rem" />
+                    </td>
+                    <td>
+                        <button class="btn btn-sm btn-info edit-btn">Edit</button>
+                    </td>
+                    <td>
+                        <a asp-action="DeleteMember" asp-route-Id="@obj.Id" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+                <tr class="userData text-center" style="height:5rem;display:none" id="editdata">
+                    <form asp-controller="Home" asp-action="EditMember" asp-route-Id="@obj.Id" method="post">
+                        <input asp-for="@obj.Id" style="display:none">
+                        <td>
+                            <input asp-for="@obj.Name" class="form-control" />
+                        </td>
+                        <td>
+                            <input asp-for="@obj.PhoneNumber" class="form-control" />
+                            <span asp-validation-for="@obj.PhoneNumber" class="text-danger"></span>
+                        </td>
+                        <td>
+                            <select asp-for="@obj.Gender" class="form-control">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input asp-for="@obj.Address" class="form-control" />
+                        </td>
+                        <td>
+                            <img src="@obj.ImageUrl" style="height:4.5rem" />
+                        </td>
+                        <td>
+                        <button type="submit" class="btn btn-sm btn-success btn-update">Update</button>
+                        <button class="btn btn-sm btn-secondary cancel-btn">Cancel</button>
+                        </td>
+                        <td>
+                            <a asp-action="DeleteMember" asp-route-Id="@obj.Id" class="btn btn-sm btn-danger">Delete</a>
+                        </td>
+                    </form>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<script>
+    $(document).ready(function () {
+        $(".edit-btn").click(function (e) {
+            e.preventDefault();
+            $(this).closest("tr").hide();
+            $(this).closest("tr").next(".userData").show();
+        });
+
+        $(".cancel-btn").click(function (e) {
+            e.preventDefault();
+            $(this).closest(".userData").hide();
+            $(this).closest(".userData").prev("tr").show();
+        });
+    });
+</script>

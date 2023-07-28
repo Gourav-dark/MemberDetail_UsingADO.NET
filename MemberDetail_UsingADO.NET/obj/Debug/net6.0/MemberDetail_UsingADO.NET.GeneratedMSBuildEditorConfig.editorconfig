@@ -16,20 +16,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\CV_Projects\MemberDetail_UsingADO.NET\MemberDetail_UsingADO.NET
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/CV_Projects/MemberDetail_UsingADO.NET/MemberDetail_UsingADO.NET/Views/Home/EditMember.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0TWVtYmVyLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/CV_Projects/MemberDetail_UsingADO.NET/MemberDetail_UsingADO.NET/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/CV_Projects/MemberDetail_UsingADO.NET/MemberDetail_UsingADO.NET/Views/Home/User.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc2VyLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/CV_Projects/MemberDetail_UsingADO.NET/MemberDetail_UsingADO.NET/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CV_Projects/MemberDetail_UsingADO.NET/MemberDetail_UsingADO.NET/Views/Shared/_AddUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZGRVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CV_Projects/MemberDetail_UsingADO.NET/MemberDetail_UsingADO.NET/Views/Shared/_UserList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Vc2VyTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/CV_Projects/MemberDetail_UsingADO.NET/MemberDetail_UsingADO.NET/Views/Shared/_ValidationScriptsPartial.cshtml]
